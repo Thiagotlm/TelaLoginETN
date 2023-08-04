@@ -1,0 +1,62 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+  <meta charset="UTF-3">
+  <title>Tela de Login</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+  <header>
+    <span class="logo" id="logo">
+      <img src="img/Logo_da_Eletronuclear.png" alt="">
+    </span>
+  </header>
+  <div class="box">
+    <form>
+      <h2>Login</h2>
+      <div class="inputBox">
+        <input type="text" required="required">
+        <span>Username</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="password" required="required">
+        <span>Password</span>
+        <i></i>
+      </div>
+      <div class="links">
+        <a href="#">Forgot Password</a>
+        <a href="#">Sign Up</a>
+      </div>
+      <input type="submit" value="Login">
+      <input type="reset" value="Reset">
+
+    </form>
+  </div>
+
+  <script>
+    // JavaScript 
+    // Exemplo básico de manipulação do formulário de login
+    const form = document.querySelector('form');
+    const usernameInput = document.querySelector('input[type="text"]:nth-of-type(1)');
+    const passwordInput = document.querySelector('input[type="password"]:nth-of-type(2)');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Impede o envio do formulário
+      // Valide os campos do formulário
+      if (usernameInput.value.trim() === '') {
+        alert('Por favor, insira o nome de usuário.');
+        return;
+      }
+      if (passwordInput.value.trim() === '') {
+        alert('Por favor, insira a senha.');
+        return;
+      }
+      // Faça algo com os dados do formulário
+      alert('Login realizado com sucesso!');
+    });
+  </script>
+</body>
+
+</html>
